@@ -1,0 +1,14 @@
+{
+  "id": "qwen2.5-1.5b-instruct-q4_k_m",
+  "display_name": "Qwen2.5 1.5B Instruct — Q4_K_M",
+  "publisher": "Qwen",
+  "format": "GGUF",
+  "quantization": "Q4_K_M",
+  "parameters": "1.54B",
+  "release_asset": "qwen2.5-1.5b-instruct-q4_k_m.gguf",
+  "source": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+  "ollama_model": "hf.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M",
+  "license": "Apache-2.0",
+  "sha256_file": "SHA256SUMS-qwen2.5-1.5b-q4-k-m",
+  "intended_use": "Assistant local plus capable pour le raisonnement, les sorties structurées, les tâches scientifiques assistées et les flux multilingues de RATISS Aeon Prime."
+}

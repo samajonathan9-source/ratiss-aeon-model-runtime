@@ -2,15 +2,16 @@
 
 Ce dépôt privé centralise les **manifestes, empreintes et instructions de démarrage** des modèles locaux utilisés par RATISS Aeon Prime. Les poids binaires publiés avec une release sont des copies de distribution ; la référence de licence et de provenance demeure la carte officielle de l’éditeur.
 
-## Modèle initial
+## Modèles disponibles
 
 | Modèle | Format | Empreinte de taille | Usage cible |
 | --- | --- | --- | --- |
 | Qwen2.5 0.5B Instruct Q4_K_M | GGUF | environ 469 Mo sur disque | inférence locale légère, routage, extraction et génération structurée |
+| Qwen2.5 1.5B Instruct Q4_K_M | GGUF | environ 1,1 Go sur disque | raisonnement local plus riche, sorties structurées et tâches multilingues |
 
 ## Récupération et intégrité
 
-Téléchargez le fichier `.gguf` depuis la release **Qwen2.5 0.5B Instruct — Q4_K_M**, puis contrôlez-le avec le fichier `SHA256SUMS` publié dans les mêmes assets.
+Téléchargez le fichier `.gguf` depuis la release correspondant au modèle choisi, puis contrôlez-le avec le fichier SHA-256 publié dans les mêmes assets.
 
 ```bash
 sha256sum -c SHA256SUMS
@@ -21,13 +22,13 @@ sha256sum -c SHA256SUMS
 La voie la plus simple consiste à utiliser Ollama, qui récupère automatiquement la version Q4_K_M :
 
 ```bash
-ollama run qwen2.5:0.5b-instruct
+ollama run hf.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF:Q4_K_M
 ```
 
 Pour exposer le fichier GGUF par une API compatible OpenAI locale, installez `llama.cpp`, puis exécutez :
 
 ```bash
-bash scripts/run-qwen-local.sh ./qwen2.5-0.5b-instruct-q4_k_m.gguf
+bash scripts/run-qwen-local.sh ./qwen2.5-1.5b-instruct-q4_k_m.gguf
 ```
 
 L’API locale sera disponible sur `http://127.0.0.1:8080/v1`.
@@ -38,4 +39,4 @@ Les poids de plusieurs centaines de Mo ne sont pas adaptés aux commits Git ordi
 
 ## Provenance et licence
 
-Le modèle provient du dépôt officiel [Qwen2.5-0.5B-Instruct-GGUF](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF). Qwen indique une licence **Apache-2.0** pour cette variante 0.5B. Avant toute redistribution commerciale, vérifiez les termes en vigueur de l’éditeur.
+Les modèles proviennent des dépôts officiels [Qwen2.5-0.5B-Instruct-GGUF](https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF) et [Qwen2.5-1.5B-Instruct-GGUF](https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF). Qwen indique une licence **Apache-2.0** pour ces variantes. Avant toute redistribution commerciale, vérifiez les termes en vigueur de l’éditeur.
