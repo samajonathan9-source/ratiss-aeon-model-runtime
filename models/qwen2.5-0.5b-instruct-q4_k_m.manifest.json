@@ -1,0 +1,14 @@
+{
+  "id": "qwen2.5-0.5b-instruct-q4_k_m",
+  "display_name": "Qwen2.5 0.5B Instruct — Q4_K_M",
+  "publisher": "Qwen",
+  "format": "GGUF",
+  "quantization": "Q4_K_M",
+  "parameters": "494M",
+  "release_asset": "qwen2.5-0.5b-instruct-q4_k_m.gguf",
+  "source": "https://huggingface.co/Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+  "ollama_model": "qwen2.5:0.5b-instruct",
+  "license": "Apache-2.0",
+  "sha256_file": "SHA256SUMS",
+  "intended_use": "Assistant local léger pour routage, extraction structurée et interactions à faible latence au sein de RATISS Aeon Prime."
+}
